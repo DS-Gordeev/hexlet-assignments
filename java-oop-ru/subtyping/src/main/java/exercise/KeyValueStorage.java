@@ -11,4 +11,6 @@ interface KeyValueStorage {
   String get(String key, String defaultValue);
 
   Map<String, String> toMap();
+
+  void eraseDb();
 }
