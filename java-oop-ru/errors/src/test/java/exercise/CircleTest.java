@@ -9,9 +9,7 @@ class CircleTest {
     @Test
     void testException() {
         Circle circle = new Circle(new Point(1, 2), -2);
-        assertThatThrownBy(() -> {
-            circle.getSquare();
-        }).isInstanceOf(NegativeRadiusException.class);
+        assertThatThrownBy(circle::getSquare).isInstanceOf(NegativeRadiusException.class);
     }
 
     @Test
