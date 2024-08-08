@@ -6,9 +6,8 @@ import java.util.List;
 
 public class Validator {
 
-  public static List<String> notValidatedFields = new ArrayList<>();
-
   public static List<String> validate(Address address) {
+    List<String> notValidatedFields = new ArrayList<>();
     try {
       Field[] fields = address.getClass().getDeclaredFields();
       for (Field field : fields) {
